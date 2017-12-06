@@ -1,6 +1,6 @@
 FlatironKitchen::Application.routes.draw do
   resources :recipes
-
+  resources :recipe_ingredients
   resources :ingredients
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -43,7 +43,7 @@ FlatironKitchen::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
