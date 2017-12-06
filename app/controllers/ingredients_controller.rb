@@ -1,14 +1,15 @@
 class IngredientsController < ApplicationController
 
-  def new 
-  end 
+  def new
+    @ingredient = Ingredient.new 
+  end
 
-  def edit 
-  end 
+  def edit
+  end
 
-  private 
+  private
 
-  def ingredient_params 
+  def ingredient_params
     params.require(:ingredient).permit(:name)
   end 
 end
