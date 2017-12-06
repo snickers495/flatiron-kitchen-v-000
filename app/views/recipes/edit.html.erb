@@ -1,3 +1,12 @@
 Edit Recipes:
 
-<%= render 'form' %>
+<%= form_for @recipe do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
+<p>Or add an ingredient:</p>
+<%= f.fields_for :ingredients, @recipe.ingredients.build do |ingredient_fields| %>
+<%= ingredient_fields.text_field :name %>
+<% end %>
+<%= f.submit %>
+<% end%>
