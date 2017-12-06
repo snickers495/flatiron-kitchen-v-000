@@ -16,4 +16,9 @@ class RecipesController < ApplicationController
 
   def destroy
   end 
+
+  private 
+
+  def recipe_params 
+    params.require(:recipe).permit(:name)
 end
