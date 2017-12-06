@@ -4,9 +4,17 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new
   end
 
+  def create
+
+  end
+
   def edit
     @ingredient = Ingredient.find(params[:id])
   end
+
+  def update
+
+  end 
 
   private
 
