@@ -6,11 +6,11 @@ class IngredientsController < ApplicationController
 
   def create
     ingredient = Ingredient.new(ingredient_params)
-    if ingredient.save 
+    if ingredient.save
       redirect_to ingredient_path(ingredient)
-    else 
-      redirect_to new_ingredient_path 
-    end 
+    else
+      redirect_to new_ingredient_path
+    end
   end
 
   def edit
@@ -21,10 +21,10 @@ class IngredientsController < ApplicationController
     ingredient = Ingredient.find(params[:id])
     if ingredient.update(ingredient_params)
       redirect_to ingredient_path(ingredient)
-    else 
+    else
       redirect_to edit_ingredient_path
     end
-  end 
+  end
 
   private
 
