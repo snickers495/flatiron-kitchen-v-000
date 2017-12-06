@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
     if @recipe.update(recipe_params)
       redirect_to recipe_path(@recipe)
     else
-      redirect_to edit_recipe_path
+      render :edit
     end
   end
 
