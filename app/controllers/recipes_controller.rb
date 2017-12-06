@@ -13,13 +13,18 @@ class RecipesController < ApplicationController
       redirect_to recipe_path(@recipe)
     else
       redirect_to new_recipe_path
-    end 
+    end
   end
 
   def edit
   end
 
   def update
+    if @recipe.update(recipe_params)
+      redirect_to recipe_path(@recipe)
+    else
+      redirect_to edit_recipe_path
+    end
   end
 
   def destroy
